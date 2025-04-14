@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
+/*   By: epakdama <epakdama@student.42istanbul      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/13 19:43:37 by epakdama          #+#    #+#             */
-/*   Updated: 2025/04/14 13:32:01 by epakdama         ###   ########.fr       */
+/*   Created: 2025/04/12 11:40:00 by epakdama          #+#    #+#             */
+/*   Updated: 2025/04/13 14:30:49 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	rush(int col, int row);
 
-char	*ft_strcpy(char *dest, char *src)
+int	main(void)
 {
-	int	index;
-
-	index = 0;
-	while (src[index])
-	{
-		dest[index] = src[index];
-		index++;
-	}
-	return (dest);
+	rush(4, 5);
+	return (0);
 }

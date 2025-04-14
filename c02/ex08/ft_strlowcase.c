@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
+/*   By: epakdama <epakdama@student.42istanbul      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/13 20:07:42 by epakdama          #+#    #+#             */
-/*   Updated: 2025/04/14 13:32:27 by epakdama         ###   ########.fr       */
+/*   Created: 2025/04/14 12:18:49 by epakdama          #+#    #+#             */
+/*   Updated: 2025/04/14 13:34:26 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+char	*ft_strlowcase(char *str)
 {
-	unsigned int	index;
+	int	index;
 
 	index = 0;
-	while (index < n)
+	while (str[index])
 	{
-		if (src[index])
-		{
-			dest[index] = src[index];
-		}
-		else
-		{
-			dest[index] = '\0';
-		}
+		if (str[index] >= 'A' && str[index] <= 'Z')
+			str[index] = str[index] + 32;
 		index++;
 	}
-	return (dest);
+	return (str);
 }

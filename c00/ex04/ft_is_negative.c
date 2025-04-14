@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
+/*   By: epakdama <epakdama@student.42istanbul.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/13 20:07:42 by epakdama          #+#    #+#             */
-/*   Updated: 2025/04/14 13:32:27 by epakdama         ###   ########.fr       */
+/*   Created: 2025/04/09 14:39:44 by epakdama          #+#    #+#             */
+/*   Updated: 2025/04/12 11:31:28 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+void	ft_is_negative(int n)
 {
-	unsigned int	index;
+	char	positive;
+	char	negative;
 
-	index = 0;
-	while (index < n)
+	positive = 'P';
+	negative = 'N';
+	if (n < 0)
 	{
-		if (src[index])
-		{
-			dest[index] = src[index];
-		}
-		else
-		{
-			dest[index] = '\0';
-		}
-		index++;
+		write(1, &negative, 1);
 	}
-	return (dest);
+	else
+	{
+		write(1, &positive, 1);
+	}
 }

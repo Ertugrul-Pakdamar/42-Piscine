@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
+/*   By: epakdama <epakdama@student.42istanbul.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/13 20:07:42 by epakdama          #+#    #+#             */
-/*   Updated: 2025/04/14 13:32:27 by epakdama         ###   ########.fr       */
+/*   Created: 2025/04/09 13:02:20 by epakdama          #+#    #+#             */
+/*   Updated: 2025/04/09 17:30:26 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+void	ft_print_numbers(void)
 {
-	unsigned int	index;
+	char	index;
 
-	index = 0;
-	while (index < n)
+	index = '0';
+	while (index <= '9')
 	{
-		if (src[index])
-		{
-			dest[index] = src[index];
-		}
-		else
-		{
-			dest[index] = '\0';
-		}
+		write(1, &index, 1);
 		index++;
 	}
-	return (dest);
 }

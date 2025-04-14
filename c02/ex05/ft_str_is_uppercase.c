@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
+/*   By: epakdama <epakdama@student.42istanbul      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/13 20:07:42 by epakdama          #+#    #+#             */
-/*   Updated: 2025/04/14 13:32:27 by epakdama         ###   ########.fr       */
+/*   Created: 2025/04/14 10:14:40 by epakdama          #+#    #+#             */
+/*   Updated: 2025/04/14 13:33:02 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+int	ft_str_is_uppercase(char *str)
 {
-	unsigned int	index;
+	int	index;
 
 	index = 0;
-	while (index < n)
+	while (str[index])
 	{
-		if (src[index])
+		if (str[index] < 'A' || str[index] > 'Z')
 		{
-			dest[index] = src[index];
-		}
-		else
-		{
-			dest[index] = '\0';
+			return (0);
 		}
 		index++;
 	}
-	return (dest);
+	return (1);
 }

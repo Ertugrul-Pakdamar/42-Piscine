@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
+/*   By: epakdama <epakdama@student.42istanbul.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/13 20:07:42 by epakdama          #+#    #+#             */
-/*   Updated: 2025/04/14 13:32:27 by epakdama         ###   ########.fr       */
+/*   Created: 2025/04/09 12:44:00 by epakdama          #+#    #+#             */
+/*   Updated: 2025/04/12 11:30:07 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+void	ft_print_reverse_alphabet(void)
 {
-	unsigned int	index;
+	int	index;
 
-	index = 0;
-	while (index < n)
+	index = 'z';
+	while (index >= 'a')
 	{
-		if (src[index])
-		{
-			dest[index] = src[index];
-		}
-		else
-		{
-			dest[index] = '\0';
-		}
-		index++;
+		write(1, &index, 1);
+		index--;
 	}
-	return (dest);
 }

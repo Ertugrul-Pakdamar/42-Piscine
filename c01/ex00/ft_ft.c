@@ -1,33 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
+/*   By: epakdama <epakdama@student.42istanbul      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/13 20:07:42 by epakdama          #+#    #+#             */
-/*   Updated: 2025/04/14 13:32:27 by epakdama         ###   ########.fr       */
+/*   Created: 2025/04/13 10:29:20 by epakdama          #+#    #+#             */
+/*   Updated: 2025/04/13 10:34:28 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+void	ft_ft(int *nbr)
 {
-	unsigned int	index;
-
-	index = 0;
-	while (index < n)
-	{
-		if (src[index])
-		{
-			dest[index] = src[index];
-		}
-		else
-		{
-			dest[index] = '\0';
-		}
-		index++;
-	}
-	return (dest);
+	*nbr = 42;
 }
+/*
+void	ft_putnbr(int nbr)
+{
+	char	a;
+	char	b;
+
+	a = '0' + nbr / 10;
+	b = '0' + nbr % 10;
+	write(1, &a, 1);
+	write(1, &b, 1);
+}
+
+int	main(void)
+{
+	int	nbr;
+
+	nbr = 5;
+	ft_ft(&nbr);
+	ft_putnbr(nbr);
+	return (0);
+}
+*/
