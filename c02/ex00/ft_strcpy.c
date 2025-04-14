@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/13 19:43:37 by epakdama          #+#    #+#             */
-/*   Updated: 2025/04/13 19:57:54 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/04/14 13:32:01 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,3 @@ char	*ft_strcpy(char *dest, char *src)
 	}
 	return (dest);
 }
-/*
-int	main(void)
-{
-	char	*dest;
-	char	*src;
-
-	src = "Hello World!";
-	ft_strcpy(dest, src);
-}
-*/
