@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
+/*   By: epakdama <epakdama@student.42istanbul      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/13 21:12:11 by epakdama          #+#    #+#             */
-/*   Updated: 2025/04/16 19:22:14 by epakdama         ###   ########.fr       */
+/*   Created: 2025/04/16 11:11:23 by epakdama          #+#    #+#             */
+/*   Updated: 2025/04/16 11:15:45 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_str_is_alpha(char *str)
+char	*ft_strcat(char *dest, char *src)
 {
 	int	index;
-	int	is_alpha;
+	int	dest_len;
 
+	dest_len = 0;
+	while (dest[dest_len])
+		dest_len++;
 	index = 0;
-	is_alpha = 1;
-	while (str[index])
+	while (src[index])
 	{
-		if (str[index] > 'z' || str[index] < 'a')
-		{
-			if (str[index] > 'Z' || str[index] < 'A')
-				is_alpha = 0;
-		}
+		dest[dest_len + index] = src[index];
 		index++;
 	}
-	return (is_alpha);
+	return (dest);
 }
