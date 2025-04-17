@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
+/*   By: epakdama <epakdama@student.42istanbul      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/13 21:37:33 by epakdama          #+#    #+#             */
-/*   Updated: 2025/04/13 21:37:33 by epakdama         ###   ########.fr       */
+/*   Created: 2025/04/16 11:11:23 by epakdama          #+#    #+#             */
+/*   Updated: 2025/04/17 08:29:32 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_str_is_printable(char *str)
+char	*ft_strcat(char *dest, char *src)
 {
 	int	index;
+	int	dest_len;
 
+	dest_len = 0;
+	while (dest[dest_len])
+		dest_len++;
 	index = 0;
-	while (str[index])
+	while (src[index])
 	{
-		if (str[index] < 33 || str[index] > 126)
-		{
-			return (0);
-		}
+		dest[dest_len + index] = src[index];
 		index++;
 	}
-	return (1);
+	return (dest);
 }
