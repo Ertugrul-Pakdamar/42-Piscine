@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 11:11:23 by epakdama          #+#    #+#             */
-/*   Updated: 2025/04/17 08:29:32 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/04/21 11:23:40 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ char	*ft_strcat(char *dest, char *src)
 		dest[dest_len + index] = src[index];
 		index++;
 	}
+	dest[dest_len + index] = '\0';
 	return (dest);
 }
