@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
+/*   By: epakdama <epakdama@student.42istanbul.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/13 13:19:40 by epakdama          #+#    #+#             */
-/*   Updated: 2025/04/23 18:14:25 by epakdama         ###   ########.fr       */
+/*   Created: 2025/04/09 12:35:33 by epakdama          #+#    #+#             */
+/*   Updated: 2025/04/14 08:39:37 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_strlen(char *str)
+void	ft_putchar(char c)
 {
-	int	index;
-
-	index = 0;
-	while (str[index])
-	{
-		index++;
-	}
-	return (index);
+	write(1, &c, 1);
 }
