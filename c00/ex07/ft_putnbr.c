@@ -3,48 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epakdama <epakdama@student.42istanbul      +#+  +:+       +#+        */
+/*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 12:04:10 by epakdama          #+#    #+#             */
-/*   Updated: 2025/04/13 09:57:46 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/04/26 13:11:11 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putnum(int num)
+void	ft_putnbr(int nb)
 {
 	char	out;
 
-	out = '0' + num;
-	write(1, &out, 1);
-}
-
-void	ft_putnbr(int nb)
-{
-	int	min_int_modulo;
-
-	if (nb <= 9 && nb >= 0)
+	if (nb == -2147483648)
 	{
-		ft_putnum(nb);
+		write(1, "-2147483648", 11);
+		return ;
 	}
-	else if (nb > 9)
+	if (nb < 0)
+	{
+		write(1, "-", 1);
+		nb = -nb;
+	}
+	if (nb >= 10)
 	{
 		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
 	}
-	else if (nb <= -9 && nb >= -2147483647)
-	{
-		write(1, "-", 1);
-		ft_putnbr(nb * -1);
-	}
-	else
-	{
-		min_int_modulo = nb % 10;
-		nb /= 10;
-		write(1, "-", 1);
-		ft_putnbr(nb * -1);
-		ft_putnum(min_int_modulo * -1);
-	}
-	write(1, "\n", 1);
+	out = nb % 10 + '0';
+	write(1, &out, 1);
 }

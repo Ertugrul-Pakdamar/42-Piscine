@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/22 16:45:04 by epakdama          #+#    #+#             */
-/*   Updated: 2025/04/26 13:05:11 by epakdama         ###   ########.fr       */
+/*   Created: 2025/04/20 16:59:34 by epakdama          #+#    #+#             */
+/*   Updated: 2025/04/20 17:12:02 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <unistd.h>
 
-int	*ft_range(int min, int max)
+int	main(int argc, char **argv)
 {
-	int	*range;
 	int	index;
-	int	size;
 
-	if (min >= max)
-		return (NULL);
-	size = max - min;
-	range = (int *)malloc(size * sizeof(int));
-	if (!range)
-		return (NULL);
+	(void)argc;
 	index = 0;
-	while (index < size)
-	{
-		range[index] = min + index;
-		index++;
-	}
-	return (range);
+	while (argv[0][index])
+		write(1, &argv[0][index++], 1);
+	write(1, "\n", 1);
+	return (0);
 }

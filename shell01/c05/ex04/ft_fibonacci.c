@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/22 16:45:04 by epakdama          #+#    #+#             */
-/*   Updated: 2025/04/26 13:05:11 by epakdama         ###   ########.fr       */
+/*   Created: 2025/04/20 15:24:09 by epakdama          #+#    #+#             */
+/*   Updated: 2025/04/20 15:32:53 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-int	*ft_range(int min, int max)
+int	ft_fibonacci(int index)
 {
-	int	*range;
-	int	index;
-	int	size;
+	int	first;
+	int	second;
+	int	swap;
+	int	n;
 
-	if (min >= max)
-		return (NULL);
-	size = max - min;
-	range = (int *)malloc(size * sizeof(int));
-	if (!range)
-		return (NULL);
-	index = 0;
-	while (index < size)
+	first = 0;
+	second = 1;
+	n = 0;
+	if (index == 0)
+		return (0);
+	if (index < 0)
+		return (-1);
+	while (n < index - 1)
 	{
-		range[index] = min + index;
-		index++;
+		swap = second;
+		second = first + second;
+		first = swap;
+		n++;
 	}
-	return (range);
+	return (second);
 }
