@@ -1,25 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_any.c                                           :+:      :+:    :+:   */
+/*   ft_is_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/27 21:16:54 by epakdama          #+#    #+#             */
-/*   Updated: 2025/04/28 12:17:21 by epakdama         ###   ########.fr       */
+/*   Created: 2025/04/28 12:32:13 by epakdama          #+#    #+#             */
+/*   Updated: 2025/04/28 12:45:04 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_any(char **tab, int (*f)(char *))
+int	is_positive(int i)
+{
+	if (i < 0)
+		return (0);
+	else
+		return (1);
+}
+
+int	ft_is_sort(int *tab, int length, int (*f)(int, int))
 {
 	int	index;
 
-	index = 0;
+	if (!tab[1])
+		return (1);
+	index = 1;
 	while (tab[index])
 	{
-		if (f(tab[index]))
-			return (1);
+		if (!is_positive(f(tab[index - 1], tab[index])))
+			return (0);
 		index++;
 	}
-	return (0);
+	return (1);
+}
+
+#include <stdio.h>
+
+int	main(void)
+{
+	int	tab[4] = {1, 2, 3};
 }

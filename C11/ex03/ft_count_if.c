@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_any.c                                           :+:      :+:    :+:   */
+/*   ft_count_if.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/27 21:16:54 by epakdama          #+#    #+#             */
-/*   Updated: 2025/04/28 12:17:21 by epakdama         ###   ########.fr       */
+/*   Created: 2025/04/28 12:18:14 by epakdama          #+#    #+#             */
+/*   Updated: 2025/04/28 12:30:59 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_any(char **tab, int (*f)(char *))
+int	ft_count_if(char **tab, int length, int (*f)(char *))
 {
 	int	index;
+	int	count;
 
+	(void)length;
 	index = 0;
+	count = 0;
 	while (tab[index])
 	{
 		if (f(tab[index]))
-			return (1);
+			count++;
 		index++;
 	}
-	return (0);
+	return (count);
 }
