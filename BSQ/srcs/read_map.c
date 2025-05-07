@@ -6,28 +6,53 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 17:52:32 by epakdama          #+#    #+#             */
-/*   Updated: 2025/04/27 20:49:37 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/05/07 08:48:31 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fcntl.h>
-#include <stdio.h>
-#include <unistd.h>
+/**
+ * TODO:
+ * - check map validation
+ * 	- check map width
+ * 	- check map charset
+ * 	- check map objects
+ * - save map
+*/
 
-void	read_test(char *filename)
+#include "../includes/bsq.h"
+
+int	get_size_of_map(char *filename)
 {
-	char	c[100];
+	int		len;
+	char	buffer;
+	int		fd;
 
-	int fd, sz;
+	len = 0;
 	fd = open(filename, O_RDONLY);
-	sz = read(fd, &c, 150);
-	c[sz] = '\0';
-	printf("%s", c);
-	return (0);
+	while (read(fd, &buffer, 1))
+		len++;
+	close(fd);
+	return (len);
+}
+
+// *TODO	bu fonksiyon t_map türünde olmalı test için değiştirdim
+char	*get_map(char *filename)
+{
+	char	*map_data;
+	int		size_of_map;
+	int		fd;
+
+	fd = open(filename, O_RDONLY);
+	size_of_map = get_size_of_map(filename);
+	map_data = (char *)malloc(size_of_map * sizeof(char));
+	read(fd, map_data, size_of_map);
+	close(fd);
+	return (map_data);
 }
 
 int	main(int argc, char **argv)
 {
 	(void)argc;
-	read_test(argv[1]);
+	printf("%s\n", get_map_with_rows(get_map(argv[1]))[1]);
+	return (0);
 }
