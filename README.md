@@ -4,7 +4,6 @@ This repository contains the projects completed during the **Piscine** (French f
 
 <p align="left">
   <img src="https://github.com/Ertugrul-Pakdamar/Ertugrul-Pakdamar/blob/main/img/piscine-profile.png" alt="Welcome Banner" />
-  <img src="https://github.com/Ertugrul-Pakdamar/Ertugrul-Pakdamar/blob/main/img/42-logo.png" alt="Welcome Banner" />
 </p>
 
 ## 🚀 Overview
