@@ -8,7 +8,7 @@ The Piscine challenges participants with daily tasks, peer evaluations, weekend 
 
 ## 💯 Project Succes Rate
 
-| Proje Adı  | Alınan Puan |   |
+| Proje Adı  | Alınan Puan |✅/❌|
 | ---------- | ----------- | - |
 | Shell 00   | 100         | ✅ |
 | Shell 01   | 55          | ✅ |
