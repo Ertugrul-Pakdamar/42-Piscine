@@ -6,13 +6,6 @@ This repository contains the projects completed during the **Piscine** (French f
 
 The Piscine challenges participants with daily tasks, peer evaluations, weekend exams, and collaborative projects. The focus is on mastering the fundamentals of C programming, UNIX systems, memory management, and algorithmic thinking — all without formal instruction.
 
-## 📁 Project Structure
-
-42-Piscine/
-├── Shell00-01/ # Basic shell commands and filesystem navigation
-├── C00–C11/ # Progressive C exercises covering syntax to data structures
-└── Rush00/ # Team-based weekend project
-
 ## 💯 Project Succes Rate
 
 | Proje Adı  | Tamamlanma Tarihi  | Alınan Puan |   |
