@@ -8,27 +8,27 @@ The Piscine challenges participants with daily tasks, peer evaluations, weekend 
 
 ## 💯 Project Succes Rate
 
-| Proje Adı  | Tamamlanma Tarihi  | Alınan Puan |   |
-| ---------- | ------------------ | ----------- | - |
-| Shell 00   | Yaklaşık 2 ay önce | 100         |   |
-| Shell 01   | Yaklaşık 1 ay önce | 55          |   |
-| C 00       | Yaklaşık 1 ay önce | 85          |   |
-| C 01       | Yaklaşık 1 ay önce | 100         |   |
-| C 02       | Yaklaşık 1 ay önce | 85          |   |
-| C 03       | Yaklaşık 1 ay önce | 100         |   |
-| C 04       | Yaklaşık 1 ay önce | 70          |   |
-| C 05       | Yaklaşık 1 ay önce | 80          |   |
-| C 06       | Yaklaşık 1 ay önce | 70          |   |
-| C 07       | Yaklaşık 1 ay önce | 60          |   |
-| C 08       | Yaklaşık 1 ay önce | 100         |   |
-| C 09       | 29 gün önce        | 100         |   |
-| C 10       | 26 gün önce        | 0           |   |
-| C 11       | 28 gün önce        | 50          |   |
-| Exam 00    | Yaklaşık 2 ay önce | 40          |   |
-| Exam 01    | Yaklaşık 1 ay önce | 80          |   |
-| Exam 02    | Yaklaşık 1 ay önce | 90          |   |
-| Final Exam | 26 gün önce        | 66          |   |
-| Rush 00    | Yaklaşık 1 ay önce | 58          |   |
+| Proje Adı  | Alınan Puan |   |
+| ---------- | ----------- | - |
+| Shell 00   | 100         | ✅ |
+| Shell 01   | 55          | ✅ |
+| C 00       | 85          | ✅ |
+| C 01       | 100         | ✅ |
+| C 02       | 85          | ✅ |
+| C 03       | 100         | ✅ |
+| C 04       | 70          | ✅ |
+| C 05       | 80          | ✅ |
+| C 06       | 70          | ✅ |
+| C 07       | 60          | ✅ |
+| C 08       | 100         | ✅ |
+| C 09       | 100         | ✅ |
+| C 10       | 0           | ❌ |
+| C 11       | 50          | ✅ |
+| Exam 00    | 40          | ✅ |
+| Exam 01    | 80          | ✅ |
+| Exam 02    | 90          | ✅ |
+| Final Exam | 66          | ✅ |
+| Rush 00    | 58          | ❌ |
 
 ## 🔧 Topics Covered
 
