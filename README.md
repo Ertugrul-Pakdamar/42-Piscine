@@ -61,7 +61,7 @@ Each task is graded via:
 ## 📌 Notes
 
 - All code is written in **pure C** using a **UNIX-based environment**.
-- Some subfolders may contain test files and external evaluators (e.g., libft-unit-test).
+- Some subfolders may contain test files and external evaluators.
 - Projects are self-contained and follow incremental difficulty.
 
 ## 🧠 Conclusion
