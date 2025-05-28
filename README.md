@@ -2,6 +2,10 @@
 
 This repository contains the projects completed during the **Piscine** (French for "swimming pool") phase at [42 School](https://42.fr/), an intensive 26-day C programming bootcamp designed to test and develop problem-solving skills, coding proficiency, and persistence under pressure.
 
+<p align="center">
+  <img src="https://github.com/Ertugrul-Pakdamar/42-Piscine/blob/main/img/piscine-profile.png" alt="Welcome Banner" />
+</p>
+
 ## 🚀 Overview
 
 The Piscine challenges participants with daily tasks, peer evaluations, weekend exams, and collaborative projects. The focus is on mastering the fundamentals of C programming, UNIX systems, memory management, and algorithmic thinking — all without formal instruction.
