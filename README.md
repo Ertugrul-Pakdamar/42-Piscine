@@ -1,6 +1,6 @@
 # 42 Türkiye - C Piscine
 
-This repository contains the projects completed during the **Piscine** (French for "swimming pool") phase at [42 School](https://42.fr/), an intensive 26-day C programming bootcamp designed to test and develop problem-solving skills, coding proficiency, and persistence under pressure.
+This repository contains the projects completed during the **Piscine** (French for "swimming pool") phase at [42 Türkiye](https://bilisimvadisi.com.tr/markalar/42-turkiye/), an intensive 26-day C programming bootcamp designed to test and develop problem-solving skills, coding proficiency, and persistence under pressure.
 
 <p align="center">
   <img src="https://github.com/Ertugrul-Pakdamar/Ertugrul-Pakdamar/blob/main/img/piscine-profile.png" alt="Welcome Banner" />
